@@ -18,25 +18,8 @@ def chicken_rabbit(nheads,nlegs):
     rabbit = nlegs/2 - nheads
     chicken = nheads - rabbit
     return chicken,rabbit
-# nheads = int(input())
-# nlegs = int(input())
-# print(chicken_rabbit(nheads,nlegs))
 
-# You are given list of numbers separated by spaces. Write a function filter_prime which will take list of numbers as an agrument and returns only prime numbers from the list.
-def prime(lists):
-    for number in lists:
-        check = True
-        for i in range(2,int(number/2)):
-            if number % i == 0:
-                check = False
-        if check and number != 4 and number != 1:
-            prime_numbers.append(number)
-    return prime_numbers
-
-# prime_numbers=[]
-# n = int(input())
-# lists = list(map(float,input().strip().split()))[:n]
-# print(prime(lists))
+    
                 
 # Write a function that accepts string from user and print all permutations of that string.
 def permitation(strings):
