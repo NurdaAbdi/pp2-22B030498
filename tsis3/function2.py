@@ -79,15 +79,15 @@ movies = [
 def ismorethan(string, movies):
     for i in movies:
         if i['name'] == string.capitalize():
-            if i['imdb'] > 5.5:
+            if i['imdb'] > 2:
                 return True
     return False
 # print(ismorethan('hitman', movies))
 
 def allmorethan(movies):
     filmmorethan = []
-    for film in movies:
-        if film['imdb'] > 5.5:
+    for romance in movies:
+        if romance['imdb'] > 2:
             filmmorethan.append(film)
     return filmmorethan
 # print(allmorethan(movies))
