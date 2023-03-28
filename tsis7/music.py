@@ -4,13 +4,13 @@ pygame.init()
 
 song_list = ["saveyourtears.mp3" , "onerightnow.mp3" ]
 
-song_names = ["saveyourtears" , "onerightnow" ]
+song_names = ["save your tears" , "one right now" ]
 screen = pygame.display.set_mode((400, 600))
 pygame.display.set_caption('2 musics')
 
 font = pygame.font.SysFont('sf', 24)
 clock = pygame.time.Clock()
-running = True
+run = True
 
 index = 0
 pygame.mixer.music.load(song_list[index])
@@ -19,10 +19,10 @@ song_name = song_names[index]
 text1 = font.render("1-save your tears", True , ('red'))
 text2 = font.render("2-one right now", True , ('blue'))
 text3 = font.render("Currently playing:  " + song_name, True, ('green'))
-while running:
+while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            run = False
     
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_LEFT]:
@@ -50,3 +50,4 @@ while running:
     screen.blit(text3, (22, 440))
     pygame.display.flip()
     clock.tick(5.75)
+ 
