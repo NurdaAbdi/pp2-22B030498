@@ -43,7 +43,7 @@ background2 = pygame.image.load("AnimatedStreet.png")
 #Create a white screen 
 DISPLAYSURF = pygame.display.set_mode((400,600))
 DISPLAYSURF.fill(WHITE)
-pygame.display.set_caption("Game")
+pygame.display.set_caption("Game car")
 
 #declaring an enemy class
 class Enemy(pygame.sprite.Sprite):

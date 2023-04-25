@@ -150,7 +150,7 @@ def main():
             food.location.y = random.randint(0, HEIGHT // BLOCK_SIZE - 1)
         
         if snake.wall_collision():
-            running = False
+        running = False
         
         
         snake.draw()

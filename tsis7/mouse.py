@@ -33,12 +33,12 @@ while running:
     second = time.second
 
     angle1 = (second*6)
-    hand1 = pygame.transform.rotate(left_hand, -angle1+80)
+    hand1 = pygame.transform.rotate(right_hand, -angle1+80)
     rect1 = hand1.get_rect()
     rect1.center = (H_WIDTH, H_HEIGHT)
 
     angle2 = minute*6
-    hand2 = pygame.transform.rotate(right_hand, -angle2+87)
+    hand2 = pygame.transform.rotate(left_hand, -angle2+87)
     rect2 = hand2.get_rect()
     rect2.center = (H_WIDTH, H_HEIGHT)
 

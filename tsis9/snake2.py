@@ -16,7 +16,7 @@ BLOCK_SIZE = 40
 WHITE = (255, 255, 255)
 clock = pygame.time.Clock()
 font = pygame.font.SysFont("SF Pro", 42)
-pygame.display.set_caption("Snake")
+pygame.display.set_caption("Snake game")
 
 
 class Point:
@@ -66,8 +66,6 @@ class Snake:
         for idx in range(len(self.body) - 1, 0, -1):
             self.body[idx].x = self.body[idx - 1].x
             self.body[idx].y = self.body[idx - 1].y
-        # [Point(0, 1), Point(2, 5), Point(5, 9)]
-        # [Point(0, 0), Point(0, 1), Point(2, 5)]
         self.body[0].x += dx
         self.body[0].y += dy
 
@@ -79,9 +77,9 @@ class Snake:
         return True
     
     def wall_collision(self):
-        if self.body[0].x >= WIDTH or self.body[0].x <= 0:
+        if self.body[0].x >= 19 or self.body[0].x <= 0:
             return True
-        if self.body[0].y >= HEIGHT or self.body[0].y <= 0:
+        if self.body[0].y >= 19 or self.body[0].y <= 0:
             return True
         return False
 
@@ -149,7 +147,7 @@ def main():
         else:
             weight = 1
 
-        if score!= 0 and score%5 == 0:
+        if score!= 0 and score%3 == 0:
             if time >= food_timer:
                 food.location.x = random.randint(0, WIDTH // BLOCK_SIZE - 1)
                 food.location.y = random.randint(0, HEIGHT // BLOCK_SIZE - 1)
@@ -161,7 +159,7 @@ def main():
                 Point(snake.body[-1].x, snake.body[-1].y)
             )
             score += weight
-            if score%4 == 0:
+            if score%3 == 0:
                 level += 1
                 speed += 2
             

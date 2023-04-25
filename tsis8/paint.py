@@ -33,15 +33,11 @@ shape = None
 while True:
     for event in pygame.event.get():
         if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
-
+            pygame.quit()            
         # Check for key presses
         if event.type == KEYDOWN:
             if event.key == K_ESCAPE:
-                pygame.quit()
-                sys.exit()
-
+                pygame.quit()              
             # Check for color selection
             if event.key == K_r:
                 draw_color = RED

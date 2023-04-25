@@ -38,7 +38,7 @@ while run:
         index += 1
         pygame.mixer.music.load(song_list[index])
         song_name = song_names[index]
-        text3 = font.render("Currently playing:  " + song_name, True, ('purple'))
+        text3 = font.render("Currently playing:  " + song_name, True, ('green'))
         pygame.mixer.music.play()
     if index == len(song_list) - 1:
         index = -1
